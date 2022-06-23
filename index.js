@@ -2,6 +2,8 @@ const { wire, DNSServer } = require("bns");
 
 const server = new DNSServer({ tcp: true, maxConnections: 20, edns: true, ednsSize: 4096, dnssec: true });
 
+const IP = "45.33.47.188";
+
 const blocked = [
   /(^|\.)securly\.com\.$/i,
   /(^|\.)goguardian\.com\.$/i,
@@ -25,4 +27,4 @@ server.on("query", (req, res, rinfo) => {
   });
 });
 
-server.bind(53, "45.33.47.188");
+server.bind(53, IP);
