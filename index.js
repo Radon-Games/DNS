@@ -2,7 +2,7 @@ const { wire, DNSServer } = require("bns");
 
 const server = new DNSServer({ tcp: true, maxConnections: 20, edns: true, ednsSize: 4096, dnssec: true });
 
-const IP = "45.33.47.188";
+const IP = "5.161.98.206";
 
 const blocked = [
   /(^|\.)securly\.com\.$/i,
