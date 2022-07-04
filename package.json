@@ -1,0 +1,23 @@
+{
+  "name": "radon-dns",
+  "version": "1.0.0",
+  "description": "Bypass web filters through DNS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Radon-Games/DNS.git"
+  },
+  "author": "Cohen Erickson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Radon-Games/DNS/issues"
+  },
+  "homepage": "https://github.com/Radon-Games/DNS#readme",
+  "dependencies": {
+    "bns": "^0.15.0",
+    "dotenv": "^16.0.1"
+  }
+}

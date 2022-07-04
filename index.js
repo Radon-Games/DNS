@@ -1,15 +1,11 @@
 const { wire, DNSServer } = require("bns");
+require("dotenv").config();
 
 const server = new DNSServer({ tcp: true, maxConnections: 20, edns: true, ednsSize: 4096, dnssec: true });
 
-const IP = "5.161.98.206";
+const IP = process.env.IP;
 
-const blocked = [
-  /(^|\.)securly\.com\.$/i,
-  /(^|\.)goguardian\.com\.$/i,
-  /(^|\.)lightspeedsystems\.com\.$/i,
-  /.*goguardian\.pusher\.com\.$/i
-]
+const blocked = require("./blocked.js");
 
 server.on("query", (req, res, rinfo) => {
   const [question] = req.question;
