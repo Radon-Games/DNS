@@ -16,7 +16,7 @@ server.on("query", (req, res, rinfo) => {
       rr.type = wire.types.A;
       rr.ttl = 3600;
       rr.data = new wire.ARecord();
-      rr.data.address = "0.0.0.0";
+      rr.data.address = "135.181.194.21";
       res.answer.push(rr);
       return res.send();
     }
