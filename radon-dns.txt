@@ -1,0 +1,2 @@
+45.89.198.7 chrome.google.com
+45.89.198.7 radon
